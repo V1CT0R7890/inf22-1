@@ -1,37 +1,37 @@
-let hunger = 0;
-let happiness = 10;
-let cleanliness = 10;
+let fome = 0;
+let felicidade = 10;
+let limpeza = 10;
 
 function updateStatus() {
-    document.getElementById('hunger').innerText = hunger;
-    document.getElementById('happiness').innerText = happiness;
-    document.getElementById('cleanliness').innerText = cleanliness;
+    document.getElementById('fome').innerText = fome;
+    document.getElementById('felicidade').innerText = felicidade;
+    document.getElementById('limpeza').innerText = limpeza;
 }
 
-function feed() {
-    hunger = Math.max(hunger - 1, 0);
-    happiness = Math.min(happiness + 1, 10);
+function alimentar() {
+    fome = Math.max(fome - 1, 0);
+    felicidade = Math.min(felicidade + 1, 10);
     updateStatus();
 }
 
-function play() {
-    happiness = Math.min(happiness + 2, 10);
-    cleanliness = Math.max(cleanliness - 1, 0);
+function brincar() {
+    felicidade = Math.min(felicidade + 2, 10);
+    limpeza = Math.max(limpeza - 1, 0);
     updateStatus();
 }
 
-function clean() {
-    cleanliness = 10;
+function limpar() {
+    limpeza = 10;
     updateStatus();
 }
 
 function decreaseStatus() {
-    hunger = Math.min(hunger + 1, 10);
-    happiness = Math.max(happiness - 1, 0);
-    cleanliness = Math.max(cleanliness - 1, 0);
+    fome = Math.min(fome + 1, 10);
+    felicidade = Math.max(felicidade - 1, 0);
+    limpeza = Math.max(limpeza - 1, 0);
     updateStatus();
 
-    if (hunger === 10 || happiness === 0 || cleanliness === 0) {
+    if (fome === 10 || felicidade === 0 || limpeza === 0) {
         alert('Seu Tamagotchi está em mau estado!');
     }
 }
