@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tamagotchi Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h3>Meu Repositório no Github!</h3>
-    <p>Hoje eh segunda.</p>
+    <div class="container">
+        <h1>Tamagotchi Web</h1>
+        <div class="tamagotchi">
+            <img id="tamagotchi-image" src="tamagotchi-happy.png" alt="Tamagotchi">
+        </div>
+        <div class="controls">
+            <button onclick="feed()">Alimentar</button>
+            <button onclick="play()">Brincar</button>
+            <button onclick="clean()">Limpar</button>
+        </div>
+        <div class="status">
+            <p>Fome: <span id="hunger">0</span></p>
+            <p>Felicidade: <span id="happiness">10</span></p>
+            <p>Limpeza: <span id="cleanliness">10</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
